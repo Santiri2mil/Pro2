@@ -26,23 +26,29 @@ class MainActivity : AppCompatActivity() {
 
 
         guardar?.setOnClickListener{GuardarNota()}
-        borrar?.setOnClickListener{}
+        borrar?.setOnClickListener{BorrarNota()}
 
     }
 
      fun GuardarNota(){
         conAux=contenido?.text.toString()
         titAux=titulo?.text.toString()
+         setContenido()
+         setTitulo()
+
 
     }
     fun BorrarNota(){
+        Log.d(TAG, "se borro la nota")
         contenido?.setText("")
         titulo?.setText("")
     }
     fun setContenido(): String {//entrega el contenido de la nota
+        Log.d(TAG, "se envio el contenido")
         return conAux
     }
     fun setTitulo(): String{//entrega el titulo de la nota
+        Log.d(TAG, "se envio el titulo")
         return  titAux
     }
 

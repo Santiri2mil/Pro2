@@ -23,7 +23,6 @@
             android:layout_width="210dp"
             android:layout_height="0dp"
             android:inputType="textPersonName"
-            android:text="Nota"
             android:ems="10"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
             android:id="@+id/nota" app:layout_constraintTop_toTopOf="parent"
