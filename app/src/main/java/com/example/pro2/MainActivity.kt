@@ -14,17 +14,20 @@ class MainActivity : AppCompatActivity() {
     private var titulo: EditText?=null
      var conAux: String=""
      var titAux: String=""
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         val guardar: Button =findViewById<Button>(R.id.button)
         val borrar: Button =findViewById<Button>(R.id.button2)
+        val regresar: Button=findViewById<Button>(R.id.retM1)
+
 
         contenido=findViewById<EditText>(R.id.contenido)
         titulo=findViewById<EditText>(R.id.nota)
 
-
+        regresar?.setOnClickListener{startActivity(this , Menu::class.java)} // para regresar al menu
         guardar?.setOnClickListener{GuardarNota()}
         borrar?.setOnClickListener{BorrarNota()}
 
@@ -35,8 +38,6 @@ class MainActivity : AppCompatActivity() {
         titAux=titulo?.text.toString()
          setContenido()
          setTitulo()
-
-
     }
     fun BorrarNota(){
         Log.d(TAG, "se borro la nota")
