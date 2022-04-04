@@ -1,5 +1,6 @@
 package com.example.pro2
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
@@ -14,13 +15,25 @@ class Menu: AppCompatActivity(){
         val lista: Button=findViewById<Button>(R.id.lista)//Ir a la lista de notas
         val iva: Button=findViewById<Button>(R.id.iva)//Ir a hacer el IVA
 
-        crear?.setOnClickListener{startActivity(this , MainActivity::class.java)}
-        lista?.setOnClickListener{startActivity(this , RecyViewLogic::class.java)}
-        iva?.setOnClickListener{startActivity(this , ivaCal::class.java)}
+        crear?.setOnClickListener{crearNota()}
+        lista?.setOnClickListener{listaNotas()}
+        iva?.setOnClickListener{irIva()}
 
 
 
 
+    }
+    fun crearNota(){
+        val cN= Intent(this,MainActivity::class.java)
+        startActivity(cN)
+    }
+    fun listaNotas(){
+        val lN= Intent(this,RecyViewLogic::class.java)
+        startActivity(lN)
+    }
+    fun irIva(){
+        val irIva= Intent(this,ivaCal::class.java)
+        startActivity(irIva)
     }
 
 }

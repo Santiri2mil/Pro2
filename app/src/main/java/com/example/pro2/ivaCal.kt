@@ -1,5 +1,6 @@
 package com.example.pro2
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -19,7 +20,7 @@ class ivaCal : AppCompatActivity() {
         setContentView(R.layout.activity_iva_cal)
         //Buttons
         val regresar: Button =findViewById<Button>(R.id.retM3)
-        regresar?.setOnClickListener{startActivity(this , Menu::class.java)} // para regresar al menu
+        regresar?.setOnClickListener{cambairVentana3()} // para regresar al menu
         val cal:Button=findViewById<Button>(R.id.calcular)
         cal?.setOnClickListener{Calculos()}
         val del:Button = findViewById<Button>(R.id.delete)
@@ -49,6 +50,10 @@ class ivaCal : AppCompatActivity() {
         input?.setText("")
         iva?.setText("")
         precio?.setText("")
+    }
+    fun cambairVentana3(){
+        val re= Intent(this,Menu::class.java)
+        startActivity(re)
     }
 
 

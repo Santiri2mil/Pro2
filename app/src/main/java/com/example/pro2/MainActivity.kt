@@ -1,5 +1,6 @@
 package com.example.pro2
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -27,13 +28,14 @@ class MainActivity : AppCompatActivity() {
         contenido=findViewById<EditText>(R.id.contenido)
         titulo=findViewById<EditText>(R.id.nota)
 
-        regresar?.setOnClickListener{startActivity(this , Menu::class.java)} // para regresar al menu
+        regresar?.setOnClickListener{cambairVentana()} // para regresar al menu
         guardar?.setOnClickListener{GuardarNota()}
         borrar?.setOnClickListener{BorrarNota()}
 
     }
 
      fun GuardarNota(){
+         val enviar = Intent(this, NotaAdapter::class.java)
         conAux=contenido?.text.toString()
         titAux=titulo?.text.toString()
          setContenido()
@@ -43,6 +45,10 @@ class MainActivity : AppCompatActivity() {
         Log.d(TAG, "se borro la nota")
         contenido?.setText("")
         titulo?.setText("")
+    }
+    fun cambairVentana(){
+        val re=Intent(this,Menu::class.java)
+        startActivity(re)
     }
     fun setContenido(): String {//entrega el contenido de la nota
         Log.d(TAG, "se envio el contenido")

@@ -42,7 +42,7 @@
             android:layout_marginEnd="16dp" android:layout_marginBottom="16dp" android:layout_marginStart="16dp"
             tools:ignore="SpeakableTextPresentCheck" android:backgroundTint="#C5D3DD" android:background="#3F51B5"/>
     <Button
-            android:text="<-"
+            android:text="Back"
             android:layout_width="75dp"
             android:layout_height="48dp" android:id="@+id/retM1"
             app:layout_constraintTop_toTopOf="@+id/nota" app:layout_constraintStart_toStartOf="parent"

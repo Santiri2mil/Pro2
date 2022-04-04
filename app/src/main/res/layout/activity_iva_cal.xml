@@ -39,7 +39,7 @@
             android:id="@+id/textView6"
             app:layout_constraintBottom_toTopOf="@+id/IVA" app:layout_constraintStart_toStartOf="@+id/IVA"/>
     <Button
-            android:text="<-"
+            android:text="Back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/retM3"
             app:layout_constraintTop_toTopOf="parent"
