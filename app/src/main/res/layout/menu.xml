@@ -36,9 +36,17 @@
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="24dp"/>
     <TextView
+            android:text="Samuel Ramirez"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" android:id="@+id/textView2"
+            android:textSize="34sp" app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0" app:layout_constraintTop_toBottomOf="@+id/textView4"/>
+    <TextView
             android:text="Santiago Rivera Gonzalez"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/textView2"
+            android:layout_height="wrap_content" android:id="@+id/textView4"
             android:textSize="34sp" app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"
             app:layout_constraintTop_toBottomOf="@+id/textView" android:layout_marginEnd="16dp"
             app:layout_constraintEnd_toEndOf="parent"/>
