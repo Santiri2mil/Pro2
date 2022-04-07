@@ -38,8 +38,9 @@ class MainActivity : AppCompatActivity() {
          val enviar = Intent(this, NotaAdapter::class.java)
         conAux=contenido?.text.toString()
         titAux=titulo?.text.toString()
-         setContenido()
-         setTitulo()
+         enviar.putExtra("tituloK",titAux )
+         enviar.putExtra("contenidoK",conAux)
+         startActivity(enviar)
     }
     fun BorrarNota(){
         Log.d(TAG, "se borro la nota")
@@ -50,14 +51,7 @@ class MainActivity : AppCompatActivity() {
         val re=Intent(this,Menu::class.java)
         startActivity(re)
     }
-    fun setContenido(): String {//entrega el contenido de la nota
-        Log.d(TAG, "se envio el contenido")
-        return conAux
-    }
-    fun setTitulo(): String{//entrega el titulo de la nota
-        Log.d(TAG, "se envio el titulo")
-        return  titAux
-    }
+
 
     //Metodos pre hechos
     override fun onStart() {

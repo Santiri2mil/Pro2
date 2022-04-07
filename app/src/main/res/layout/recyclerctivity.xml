@@ -10,7 +10,7 @@
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="16dp" android:layout_marginStart="16dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginBottom="16dp" android:id="@+id/notasRecycler"
+            android:layout_marginBottom="16dp" android:id="@+id/nR"
             app:layout_constraintTop_toBottomOf="@+id/retM2"/>
     <Button
             android:text="Back"

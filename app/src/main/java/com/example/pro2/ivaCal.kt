@@ -27,7 +27,7 @@ class ivaCal : AppCompatActivity() {
         del?.setOnClickListener{Borrar()}
 
         input=findViewById<EditText>(R.id.input)
-        iva=findViewById<TextView>(R.id.iva)
+        iva=findViewById<TextView>(R.id.IVA)
         precio=findViewById<TextView>(R.id.precioF)
 
         iva?.text=""
